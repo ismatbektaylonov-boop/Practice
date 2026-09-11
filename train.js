@@ -1,4 +1,4 @@
-// TASK F:
+// F-TASK:
 
 // Yagona string argumentga ega findDoublers nomli function tuzing
 // Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
