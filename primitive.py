@@ -27,3 +27,21 @@ print(f"the result (3): {result}")
 
 result = course.replace("FullStack", "MasterClass")
 print(f"the result (4): {result}")
+# print(course)
+
+print("=========boolean=========")
+# functions: type(), input(), print(), int(), str()
+y = input("Enter a number: ")
+# print("y: ", y)
+result = y.isnumeric() 
+print(f"the input value is numeric: {result}")
+
+# Truthy vs Falsy values
+# Truthy values: non-zero numbers, non-empty strings, non-empty lists, True
+# Falsy values: 0, empty strings, empty lists, None, False
+
+test_falsy = "" or False or 0 or None
+print(f"the test_falsy: {bool(test_falsy)}")
+
+test_truthy = "Hello" or True or 1 or [1, 2, 3]
+print(f"the test_truthy: {bool(test_truthy)}")
