@@ -1,3 +1,21 @@
+# TASK K: 
+
+# Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
+# MASALAN: countVowels("string") return 1;
+
+def countVowels(str):
+    lowStr = str.lower()
+    count = 0
+    for char in lowStr:
+        if char == "a" or char == "o" or char == "e" or char == "i" or char == "u" or char == "y":
+            count += 1
+
+    return count
+
+
+result = countVowels("Agentic")
+print(result)
+
 """
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin,
 hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
@@ -183,12 +201,12 @@ objects:
 '''
 3. DICTIONARY (json object)
 '''
-person = {"name": "Justin", "age": 25, "single": True}
-# person_obj = dict(name="Justin", age=25, single=True)
-print(f"the person: {person['age']}")
-print(f"the person_obj: {person.get('hobby','football')}")
-del person["single"]
-print(person)
+# person = {"name": "Justin", "age": 25, "single": True}
+# # person_obj = dict(name="Justin", age=25, single=True)
+# print(f"the person: {person['age']}")
+# print(f"the person_obj: {person.get('hobby','football')}")
+# del person["single"]
+# print(person)
 '''
 4. Error handling system
 '''
