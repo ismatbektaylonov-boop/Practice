@@ -1,3 +1,32 @@
+// TASK K:
+
+// Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
+// MASALAN: countVowels("string") return 1;
+
+// function countVowels(str) {
+//     let lowStr = str.toLowerCase()
+//     let count = 0;
+//     for(let char of lowStr) {
+//         if(char === "a" || char === "o" || char === "e" || char === "i" || char === "u" || char === "y") {
+//             count++
+//         }
+//     }
+//     return count
+// }
+// const result = countVowels("agentic")
+// console.log(result)
+
+function countVowels(str) {
+	count = ''
+	vowels = 'aeiouAEIOU'
+	for (let i = 0; i < str.length; i++) {
+		if (vowels.includes(str[i])) {
+			count++
+		}
+	}
+	return count
+}
+console.log(countVowels('agentic'))
 // TASK G:
 
 // Yagona parametrga ega function tuzing.
@@ -13,17 +42,17 @@
 //     return arr.indexOf(maxNumber);
 // }
 
-function getHighestIndex(a) {
-	let highestIndex = 0
-	for (i = 0; i < a.length; i++) {
-		if (a[i] > a[highestIndex]) {
-			highestIndex = i
-		}
-	}
-	return highestIndex
-}
+// function getHighestIndex(a) {
+// 	let highestIndex = 0
+// 	for (i = 0; i < a.length; i++) {
+// 		if (a[i] > a[highestIndex]) {
+// 			highestIndex = i
+// 		}
+// 	}
+// 	return highestIndex
+// }
 
-console.log(getHighestIndex([5, 21, 12, 212, 8]))
+// console.log(getHighestIndex([5, 21, 12, 212, 8]))
 
 // F-TASK:
 
