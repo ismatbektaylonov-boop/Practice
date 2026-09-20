@@ -3,18 +3,18 @@
 # Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
 # MASALAN: countVowels("string") return 1;
 
-def countVowels(str):
-    lowStr = str.lower()
-    count = 0
-    for char in lowStr:
-        if char == "a" or char == "o" or char == "e" or char == "i" or char == "u" or char == "y":
-            count += 1
+# def countVowels(str):
+#     lowStr = str.lower()
+#     count = 0
+#     for char in lowStr:
+#         if char == "a" or char == "o" or char == "e" or char == "i" or char == "u" or char == "y":
+#             count += 1
 
-    return count
+#     return count
 
 
-result = countVowels("Agentic")
-print(result)
+# result = countVowels("Agentic")
+# print(result)
 
 """
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin,
@@ -210,3 +210,38 @@ objects:
 '''
 4. Error handling system
 '''
+class Student:
+	# constructor
+	def init(self, name, age, gpa):
+		self.__name = name
+		self.__age = age
+		self.__gpa = gpa
+
+	# method
+	def get_info(self):
+		print(f"Name: {self.__name} \n Age: {self.__age} \n GPA: {self.__gpa}")
+
+	# getter for name
+
+	@property
+	def name(self):
+		return f"Name: {self.__name} \n GPA: {self.__gpa}"
+
+	# setter for name
+	@name.setter
+	def name(self, new_name):
+		if new_name == "":
+			print("Name cannot be empty")
+		else:
+			self.__name = new_name
+
+
+student = Student("Jam", 20, 3.7)
+
+student.get_info()
+
+print("_____")
+
+print("Student name:", student.name)
+
+print("_____")
