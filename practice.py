@@ -210,38 +210,73 @@ objects:
 '''
 4. Error handling system
 '''
-class Student:
-	# constructor
-	def init(self, name, age, gpa):
-		self.__name = name
-		self.__age = age
-		self.__gpa = gpa
+# class Student:
+# 	# constructor
+# 	def init(self, name, age, gpa):
+# 		self.__name = name
+# 		self.__age = age
+# 		self.__gpa = gpa
 
-	# method
-	def get_info(self):
-		print(f"Name: {self.__name} \n Age: {self.__age} \n GPA: {self.__gpa}")
+# 	# method
+# 	def get_info(self):
+# 		print(f"Name: {self.__name} \n Age: {self.__age} \n GPA: {self.__gpa}")
 
-	# getter for name
+# 	# getter for name
 
-	@property
-	def name(self):
-		return f"Name: {self.__name} \n GPA: {self.__gpa}"
+# 	@property
+# 	def name(self):
+# 		return f"Name: {self.__name} \n GPA: {self.__gpa}"
 
-	# setter for name
-	@name.setter
-	def name(self, new_name):
-		if new_name == "":
-			print("Name cannot be empty")
-		else:
-			self.__name = new_name
+# 	# setter for name
+# 	@name.setter
+# 	def name(self, new_name):
+# 		if new_name == "":
+# 			print("Name cannot be empty")
+# 		else:
+# 			self.__name = new_name
 
 
-student = Student("Jam", 20, 3.7)
+# student = Student("Jam", 20, 3.7)
 
-student.get_info()
+# student.get_info()
 
-print("_____")
+# print("_____")
 
-print("Student name:", student.name)
+# print("Student name:", student.name)
 
-print("_____")
+# print("_____")
+
+from array import array
+
+# 1. Dastlabki ma'lumotlar
+group_a_array = array("i", [101, 102, 103, 104, 105])
+group_b_set = {103, 104, 106, 107}
+
+# --- 1-qadam: Array ustida amallar ---
+group_a_array.append(99)        # Oxiriga 99 qo'shish
+group_a_array.insert(0, 10)      # Boshiga 10 qo'shish
+del group_a_array[0:2]           # Birinchi 2 ta elementni o'chirish
+
+print("O'zgartirilgan Array:", group_a_array)
+
+# --- 2-qadam: Array-ni Set-ga o'girish ---
+group_a_set = set(group_a_array)
+print("Set ga o'tkazilgan Group A:", group_a_set)
+
+# --- 3-qadam: Specific Operators (| , & , - , ^) ---
+
+# Barcha xodimlar ID si (Union)
+all_employees = group_a_set | group_b_set
+print("Barcha noyob ID lar (|):", all_employees)
+
+# Ikkala guruhda ham bor xodimlar (Intersection)
+common_employees = group_a_set & group_b_set
+print("Ikkala guruhda ham bor ID lar (&):", common_employees)
+
+# Faqat Group A da bor ID lar (Difference)
+only_group_a = group_a_set - group_b_set
+print("Faqat Group A dagi ID lar (-):", only_group_a)
+
+# Faqat bitta guruhda bor ID lar (Symmetric Difference)
+unique_to_each = group_a_set ^ group_b_set
+print("Bir vaqtda ikkala guruhda bo'lmagan ID lar (^):", unique_to_each)
