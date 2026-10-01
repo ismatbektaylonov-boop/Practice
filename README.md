@@ -16,3 +16,15 @@ git remote add origin https://github_address
 git push origin master
 git pull origin master
 ```
+
+## Pip commands:
+
+```
+windows pip | macOS pip3
+
+pip list
+pip install pillow
+pip uninstall pilliw
+pip show pillow
+pip freeze > requirements.txt
+```
