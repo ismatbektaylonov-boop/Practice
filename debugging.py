@@ -4,6 +4,7 @@
 (3) Debbuging
 '''
 
+from PIL import Image
 # pillow. package orqari b is rasimning size va razmerini bera olar ekanmiz.
 # import turtle
 # print("===========Python peckages & core package ========== ")
@@ -32,3 +33,13 @@ with open("material/message.txt", "r") as your_file:
     print("your_content", your_content)
 
 print("DONE")
+
+print("========== Package menager & externial peckage ==========")
+''' peckage meagers: pip pipenv npm yarn comproser brew'''
+# externial peckage https://pypi.org/
+
+
+with Image.open("material/mvc.jpg") as img_obj:
+    resized_img = img_obj.resize((400, 200))
+    resized_img.show()
+    resized_img.save("material/sample.jpg")
