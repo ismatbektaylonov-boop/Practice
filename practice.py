@@ -246,37 +246,95 @@ objects:
 
 # print("_____")
 
+# from array import array
+
+# # 1. Dastlabki ma'lumotlar
+# group_a_array = array("i", [101, 102, 103, 104, 105])
+# group_b_set = {103, 104, 106, 107}
+
+# # --- 1-qadam: Array ustida amallar ---
+# group_a_array.append(99)        # Oxiriga 99 qo'shish
+# group_a_array.insert(0, 10)      # Boshiga 10 qo'shish
+# del group_a_array[0:2]           # Birinchi 2 ta elementni o'chirish
+
+# print("O'zgartirilgan Array:", group_a_array)
+
+# # --- 2-qadam: Array-ni Set-ga o'girish ---
+# group_a_set = set(group_a_array)
+# print("Set ga o'tkazilgan Group A:", group_a_set)
+
+# # --- 3-qadam: Specific Operators (| , & , - , ^) ---
+
+# # Barcha xodimlar ID si (Union)
+# all_employees = group_a_set | group_b_set
+# print("Barcha noyob ID lar (|):", all_employees)
+
+# # Ikkala guruhda ham bor xodimlar (Intersection)
+# common_employees = group_a_set & group_b_set
+# print("Ikkala guruhda ham bor ID lar (&):", common_employees)
+
+# # Faqat Group A da bor ID lar (Difference)
+# only_group_a = group_a_set - group_b_set
+# print("Faqat Group A dagi ID lar (-):", only_group_a)
+
+# # Faqat bitta guruhda bor ID lar (Symmetric Difference)
+# unique_to_each = group_a_set ^ group_b_set
+# print("Bir vaqtda ikkala guruhda bo'lmagan ID lar (^):", unique_to_each)
+
 from array import array
 
-# 1. Dastlabki ma'lumotlar
-group_a_array = array("i", [101, 102, 103, 104, 105])
-group_b_set = {103, 104, 106, 107}
+# ==========================================
+# 1. ADVANCED ARRAY & SET PRACTICE
+# ==========================================
 
-# --- 1-qadam: Array ustida amallar ---
-group_a_array.append(99)        # Oxiriga 99 qo'shish
-group_a_array.insert(0, 10)      # Boshiga 10 qo'shish
-del group_a_array[0:2]           # Birinchi 2 ta elementni o'chirish
+# Ikkita har xil ma'lumotlar to'plami
+array1 = array("i", [1, 2, 3, 4, 5, 6])
+array2 = array("i", [4, 5, 6, 7, 8, 9])
 
-print("O'zgartirilgan Array:", group_a_array)
+# Array amallari
+array1.append(10)
+array1.insert(0, 0)
+del array1[0:2]  # Boshidagi 2 ta elementni o'chirish
 
-# --- 2-qadam: Array-ni Set-ga o'girish ---
-group_a_set = set(group_a_array)
-print("Set ga o'tkazilgan Group A:", group_a_set)
+# Set ga o'tkazish va operatorlar bilan ishlash
+set1 = set(array1)
+set2 = set(array2)
 
-# --- 3-qadam: Specific Operators (| , & , - , ^) ---
+print("--- Set Operatorlari ---")
+print("Barchasi (Union |):", set1 | set2)
+print("Umumiylari (Intersection &):", set1 & set2)
+print("Faqat 1-to'plamdagilar (Difference -):", set1 - set2)
+print("Takrorlanmaganlar (Symmetric Difference ^):", set1 ^ set2)
 
-# Barcha xodimlar ID si (Union)
-all_employees = group_a_set | group_b_set
-print("Barcha noyob ID lar (|):", all_employees)
 
-# Ikkala guruhda ham bor xodimlar (Intersection)
-common_employees = group_a_set & group_b_set
-print("Ikkala guruhda ham bor ID lar (&):", common_employees)
+# ==========================================
+# 2. DICTIONARY & OBJECT TRANSFORMATIONS
+# ==========================================
 
-# Faqat Group A da bor ID lar (Difference)
-only_group_a = group_a_set - group_b_set
-print("Faqat Group A dagi ID lar (-):", only_group_a)
+# Dict -> Nested Array o'g'irish va Filtrlash
+def filter_and_convert(data_dict, min_value):
+    # Faqat qiymati min_value dan katta bo'lganlarini [key, value] ko'rinishida qaytaradi
+    return [[key, val] for key, val in data_dict.items() if isinstance(val, (int, float)) and val >= min_value]
 
-# Faqat bitta guruhda bor ID lar (Symmetric Difference)
-unique_to_each = group_a_set ^ group_b_set
-print("Bir vaqtda ikkala guruhda bo'lmagan ID lar (^):", unique_to_each)
+sample_dict = {"apple": 50, "banana": 20, "orange": 100, "is_fresh": True}
+print("\n--- Dict Transformation ---")
+print("Filtered Array:", filter_and_convert(sample_dict, 30))
+
+
+# ==========================================
+# 3. STRING EXPRESSIONS & DYNAMIC CALCULATION
+# ==========================================
+
+# Massiv ichidagi matematik ifodalarni hisoblash
+def evaluate_list(expressions):
+    results = {}
+    for idx, expr in enumerate(expressions):
+        try:
+            results[f"calc_{idx + 1}"] = eval(expr)
+        except Exception as e:
+            results[f"calc_{idx + 1}"] = f"Error: {e}"
+    return results
+
+expr_list = ["10 + 20 * 2", "100 - 45", "50 / 2"]
+print("\n--- Expression Evaluation ---")
+print("Calculated Dict:", evaluate_list(expr_list))

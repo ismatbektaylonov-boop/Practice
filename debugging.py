@@ -14,12 +14,44 @@
 # ''' Python peckages/ Modules: core,file and extrnial'''
 # # core peckages https://docs.python.org/3/library
 import turtle
-t = turtle.Turtle()
-t.shape("turtle")
-t.speed(2)
-t.circle(170)
+import turtle
 
-turtle.done
+# Maashina turtle qopheessuu
+pen = turtle.Turtle()
+screen = turtle.Screen()
+
+screen.bgcolor("black")  # Duubbee (background) gurraacha
+pen.color("red")         # Halluu diimaa
+pen.fillcolor("red")     # Halluu keessatti guutamu
+pen.speed(3)             # Saffisa kaasuu
+
+# Onnee kaasuu eegaluu
+pen.begin_fill()
+
+pen.left(140)
+pen.forward(113)
+
+# Geengoo (curve) onnee gara bitaa
+for _ in range(200):
+    pen.right(1)
+    pen.forward(1)
+
+pen.left(120)
+
+# Geengoo (curve) onnee gara mirgaa
+for _ in range(200):
+    pen.right(1)
+    pen.forward(1)
+
+pen.forward(112)
+
+pen.end_fill()
+
+# Qalamni akka hin mul'anne dhoksuu
+pen.hideturtle()
+
+# Fakkichaa erga kaasee booda akka hin cufamneef
+turtle.done()
 
 # my_file = open("material/message.txt", "r")
 
