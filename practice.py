@@ -1,3 +1,15 @@
+'''TASK S:
+
+Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
+MASALAN: missingNumber([3, 0, 1]) return 2'''
+
+def missingNumber(nums):
+    n = len(nums)
+    return n * (n + 1) // 2 - sum(nums)
+
+
+print(missingNumber([4, 0, 1, 2]))  # 3
+
 # TASK K: 
 
 # Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
@@ -281,60 +293,60 @@ objects:
 # unique_to_each = group_a_set ^ group_b_set
 # print("Bir vaqtda ikkala guruhda bo'lmagan ID lar (^):", unique_to_each)
 
-from array import array
+# from array import array
 
-# ==========================================
-# 1. ADVANCED ARRAY & SET PRACTICE
-# ==========================================
+# # ==========================================
+# # 1. ADVANCED ARRAY & SET PRACTICE
+# # ==========================================
 
-# Ikkita har xil ma'lumotlar to'plami
-array1 = array("i", [1, 2, 3, 4, 5, 6])
-array2 = array("i", [4, 5, 6, 7, 8, 9])
+# # Ikkita har xil ma'lumotlar to'plami
+# array1 = array("i", [1, 2, 3, 4, 5, 6])
+# array2 = array("i", [4, 5, 6, 7, 8, 9])
 
-# Array amallari
-array1.append(10)
-array1.insert(0, 0)
-del array1[0:2]  # Boshidagi 2 ta elementni o'chirish
+# # Array amallari
+# array1.append(10)
+# array1.insert(0, 0)
+# del array1[0:2]  # Boshidagi 2 ta elementni o'chirish
 
-# Set ga o'tkazish va operatorlar bilan ishlash
-set1 = set(array1)
-set2 = set(array2)
+# # Set ga o'tkazish va operatorlar bilan ishlash
+# set1 = set(array1)
+# set2 = set(array2)
 
-print("--- Set Operatorlari ---")
-print("Barchasi (Union |):", set1 | set2)
-print("Umumiylari (Intersection &):", set1 & set2)
-print("Faqat 1-to'plamdagilar (Difference -):", set1 - set2)
-print("Takrorlanmaganlar (Symmetric Difference ^):", set1 ^ set2)
-
-
-# ==========================================
-# 2. DICTIONARY & OBJECT TRANSFORMATIONS
-# ==========================================
-
-# Dict -> Nested Array o'g'irish va Filtrlash
-def filter_and_convert(data_dict, min_value):
-    # Faqat qiymati min_value dan katta bo'lganlarini [key, value] ko'rinishida qaytaradi
-    return [[key, val] for key, val in data_dict.items() if isinstance(val, (int, float)) and val >= min_value]
-
-sample_dict = {"apple": 50, "banana": 20, "orange": 100, "is_fresh": True}
-print("\n--- Dict Transformation ---")
-print("Filtered Array:", filter_and_convert(sample_dict, 30))
+# print("--- Set Operatorlari ---")
+# print("Barchasi (Union |):", set1 | set2)
+# print("Umumiylari (Intersection &):", set1 & set2)
+# print("Faqat 1-to'plamdagilar (Difference -):", set1 - set2)
+# print("Takrorlanmaganlar (Symmetric Difference ^):", set1 ^ set2)
 
 
-# ==========================================
-# 3. STRING EXPRESSIONS & DYNAMIC CALCULATION
-# ==========================================
+# # ==========================================
+# # 2. DICTIONARY & OBJECT TRANSFORMATIONS
+# # ==========================================
 
-# Massiv ichidagi matematik ifodalarni hisoblash
-def evaluate_list(expressions):
-    results = {}
-    for idx, expr in enumerate(expressions):
-        try:
-            results[f"calc_{idx + 1}"] = eval(expr)
-        except Exception as e:
-            results[f"calc_{idx + 1}"] = f"Error: {e}"
-    return results
+# # Dict -> Nested Array o'g'irish va Filtrlash
+# def filter_and_convert(data_dict, min_value):
+#     # Faqat qiymati min_value dan katta bo'lganlarini [key, value] ko'rinishida qaytaradi
+#     return [[key, val] for key, val in data_dict.items() if isinstance(val, (int, float)) and val >= min_value]
 
-expr_list = ["10 + 20 * 2", "100 - 45", "50 / 2"]
-print("\n--- Expression Evaluation ---")
-print("Calculated Dict:", evaluate_list(expr_list))
+# sample_dict = {"apple": 50, "banana": 20, "orange": 100, "is_fresh": True}
+# print("\n--- Dict Transformation ---")
+# print("Filtered Array:", filter_and_convert(sample_dict, 30))
+
+
+# # ==========================================
+# # 3. STRING EXPRESSIONS & DYNAMIC CALCULATION
+# # ==========================================
+
+# # Massiv ichidagi matematik ifodalarni hisoblash
+# def evaluate_list(expressions):
+#     results = {}
+#     for idx, expr in enumerate(expressions):
+#         try:
+#             results[f"calc_{idx + 1}"] = eval(expr)
+#         except Exception as e:
+#             results[f"calc_{idx + 1}"] = f"Error: {e}"
+#     return results
+
+# expr_list = ["10 + 20 * 2", "100 - 45", "50 / 2"]
+# print("\n--- Expression Evaluation ---")
+# print("Calculated Dict:", evaluate_list(expr_list))
