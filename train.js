@@ -1,23 +1,38 @@
+/** 32. Primitiv Variablelar -> run.py, primitive.py
+ * 33. Functionlar -> functions.py
+ * 34. Objectlar -> objects.py, iterable.py
+ * 35. Classlar -> class.about.py
+ * 36. Classlarni chuqur o'rganamiz -> class.deep.py
+ * 37. Inheritence va Polimorphism -> class.ip.py
+ * 38. Operator va Conditionlar -> opercon.py
+ * 39. Loop operatorlari -> loops.py
+ * 40. Tuple -> tuples.py
+ * 41. List -> lists.py
+ * 42. Array hamda Set -> array.set.py
+ * 43. Comprehention -> comprehention.py
+ * 44. Packagelar hamda Debugging jarayoni -> debugging.py
+ */
+
 // TASK L:
 
 // Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin.
 // MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
 
-function reverseSentence(str) {
-	const words = str.split(' ')
-	let newSentence = ''
+// function reverseSentence(str) {
+// 	const words = str.split(' ')
+// 	let newSentence = ''
 
-	for (let word of words) {
-		let reversedWord = word.split('').reverse().join('')
-		// Boshlanishida bo'sh joy qo'shilmasligi uchun:
-		newSentence = newSentence ? newSentence + ' ' + reversedWord : reversedWord
-	}
+// 	for (let word of words) {
+// 		let reversedWord = word.split('').reverse().join('')
+// 		// Boshlanishida bo'sh joy qo'shilmasligi uchun:
+// 		newSentence = newSentence ? newSentence + ' ' + reversedWord : reversedWord
+// 	}
 
-	return newSentence
-}
+// 	return newSentence
+// }
 
-const result = reverseSentence('we like coding')
-console.log(result) // "ew ekil gnidoc"
+// const result = reverseSentence('we like coding')
+// console.log(result) // "ew ekil gnidoc"
 
 // TASK K:
 

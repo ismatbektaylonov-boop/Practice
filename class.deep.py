@@ -25,10 +25,12 @@ class Account():
 
     def deposit(self, amount):
         print("desposit method called")
+        # print("desposit", amount)
         self.__amount += amount  # private method
 
     def withdraw(self, amount):
         print("withdraw method called")
+        # print("withdraw", amount)
         if amount <= self.__amount:
             self.__amount -= amount  # private method
         else:
@@ -74,7 +76,6 @@ except Exception as err:
 account_owner = account1.holder
 print(account_owner)  # Kevin deb chiqarib berdi pasda
 
-# Kevin deb chiqarib berdi pasda
 # Kevin deb chiqarib berdi pasda
 print("owner before change:", account1.holder)
 account1.change_owner("Fede")  # public method
