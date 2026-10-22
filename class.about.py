@@ -9,7 +9,7 @@ print("===== What is class =====")
 # structure > state constructor method
 
 
-class Person():
+class Person:
     # state
     message = "static state property"
 
@@ -25,9 +25,9 @@ class Person():
     def say_age(self):
         print(f"{self.name} says I am {self.age}!")
 
-@classmethod
-def explain(cls):
-		print("static method property executed!")
+    @classmethod
+    def explain(cls):
+            print("static method property executed!")
 
 
 person1 = Person("Justin", 25)

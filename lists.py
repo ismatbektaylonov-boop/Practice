@@ -34,7 +34,7 @@ b = fruits[-1]
 c = fruits[1:3]
 # tenglashtiriladi yani c=['banana', 'cherry'] chiqadi
 # bunda fruits listining 0-indexidan boshlab 2 qadam bilan itemlar "apple" va "cherry" ga
-d = fruits[::2]
+d = fruits[0::2]
 # tenglashtiriladi yani d=['apple', 'cherry'] chiqadi
 # bunda fruits listining itemlari teskari tartibda olinadi yani e=['cherry', 'banana', 'apple'] chiqadi
 e = fruits[::-1]

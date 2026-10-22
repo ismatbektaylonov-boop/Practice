@@ -4,13 +4,13 @@ print("=========number=========")
 
 count = 100
 count_type = type(count)
-# print("count: ", count, "count_type: ", count_type)
+print("count: ", count, "count_type: ", count_type)
 print(f"count: {count}, count_type: {count_type}")
 
-result1 = count.bit_count() # methods
+result1 = count.bit_count() # methods, 
 print(f"result1: {result1}")
 
-result2 = count.numerator() # state
+result2 = count.numerator # state
 print(f"result2: {result2}")
 
 print("=========string=========")
@@ -27,21 +27,21 @@ print(f"the result (3): {result}")
 
 result = course.replace("FullStack", "MasterClass")
 print(f"the result (4): {result}")
-# print(course)
+print(course)
 
 print("=========boolean=========")
 # functions: type(), input(), print(), int(), str()
-y = input("Enter a number: ")
-# print("y: ", y)
-result = y.isnumeric() 
-print(f"the input value is numeric: {result}")
+# y = input("Enter a number: ")
+# # print("y: ", y)
+# result = y.isnumeric() 
+# print(f"the input value is numeric: {result}")
 
 # Truthy vs Falsy values
 # Truthy values: non-zero numbers, non-empty strings, non-empty lists, True
 # Falsy values: 0, empty strings, empty lists, None, False
 
-test_falsy = "" or False or 0 or None
+test_falsy = "" or False or 0 or None or 1
 print(f"the test_falsy: {bool(test_falsy)}")
 
-test_truthy = "Hello" or True or 1 or [1, 2, 3]
+test_truthy = "Hello" and True and 1 and [1, 2, 3] and ""
 print(f"the test_truthy: {bool(test_truthy)}")

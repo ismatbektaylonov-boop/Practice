@@ -1,7 +1,7 @@
 print("===== Iterable objects & RANGE =====")
 # Iterable objects > string dict tuple list range map filter
 
-range_obj = range(3)
+range_obj = range(1, 5)  # [0, 1, 2]
 print("range_obj:", range_obj)
 
 for letter in "MIT":
@@ -25,5 +25,6 @@ balance = person_obj.get("balance", 0)
 print(f"the name: {name}, hobby: {hobby} and balance: {balance}")
 
 del person_obj["single"]
+print("person_obj:", person_obj)
 for key in person_obj:
-    print(f"the key: {key} > value {person_obj.get(key)}")
+    print(f"the key: {key} > value {person_obj[key]}")

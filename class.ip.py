@@ -87,8 +87,8 @@ class Fish(Animal):  # child class
 
 
 dog = Dog("Woof", "Rex", True)
-cat = Cat("Mia", "Miew", "Black", True)
-fish = Fish("Bubbles", False, "Goldfish")
+cat = Cat("Tom", "Miew", "Blue", True)
+fish = Fish("Nemo", False, "Goldfish")
 
 dog.introduce()
 dog.protect_owner()

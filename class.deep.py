@@ -15,7 +15,7 @@ class Account():
     # constructor
 
     def __init__(self, owner, amount):
-        self.__owner = owner  # public property
+        self.__owner = owner  # private property
         self.__amount = amount  # private property
     # methods
 
@@ -63,6 +63,11 @@ print("-------")
 account1.deposit(3500)  # public method
 account1.withdraw(2000)  # public method
 account1.get_balance()  # public method
+
+print("="*10)
+account1.__owner="Joseph"
+account1.deposit(5000)
+account1.get_balance()
 
 print("-------")
 # print(account1.owner)

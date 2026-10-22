@@ -82,7 +82,7 @@ if not is_student:
     print("Welcome, do you want to enroll in our courses?")
 elif is_admin:
     print("Welcome, admin! You have full access to the system.")
-elif is_guest or is_parent:
+elif not is_guest and is_parent:
     print("Welcome, you may go to the waiting room.")
 else:
     print("Others, welcome! Please wait for further instructions.")

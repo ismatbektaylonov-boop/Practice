@@ -10,7 +10,7 @@ abc = "a"
 #  Java/PHP/Nodejs array >> Python list
 
 # literal
-numbs = [1, 2, 3, 4, 5]
+numbs = (1, 2, 3, 4, 5)
 
 # constructor
 # bunda string ichidagi har bir harf listning itemi sifatida olinadi yani ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'] chiqadi
@@ -30,8 +30,8 @@ print(f"list fruits: {fruits}")
 animals = ("cat", "dog", "rabbit")
 tuple_obj = ("MIT", 100, True, None)
 print(animals[0])
-# bunda animals tuple ning 0-indexidagi item "lion" ga o'zgartiriladi
-animals[0] = "lion"
+# bunda animals tuple ning 0-inrdexidagi item "lion" ga o'zgartiriladi
+# animals[0] = "lion"
 # yani TypeError: 'tuple' object does not support item assignment chiqadi
 print(animals)
 
@@ -45,7 +45,7 @@ animals = "cat",
 #  pythonda args ni yoyishni tuplelar orqali amalga oshiriladi
 groups = ("MIT", "Harvard", "Stanford", "Yale", "Princeton", "Columbia")
 # bunda groups listining itemlari a, b, c ga tenglashtiriladi yani a=MIT, b=Harvard, c=Stanford chiqadi
-(*a, b, c) = groups
+(a, *b, c) = groups
 print(f"a: {a}, b: {b}, c: {c}")
 
 # *args === tuple
@@ -100,8 +100,8 @@ print("=======zip========")
 # returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences
 names = ("Alice", "Bob", "Charlie", "Nathan", "Tom")
 ages = (30, 25, 35, 40, 28)
-cities = ("New York", "Los Angeles", "Chicago", "San Francisco")
+cities = ("New York", "Los Angeles", "Chicago", "San Francisco", "London")
 # bunda names, ages, cities listlarining itemlari zip orqali birlashtiriladi yani
 #  [('Alice', 30, 'New York'), ('Bob', 25, 'Los Angeles'), ('Charlie', 35, 'Chicago')] chiqadi
 zipped = zip(names, ages, cities)
-print(tuple(zipped))
+print(list(zipped))
